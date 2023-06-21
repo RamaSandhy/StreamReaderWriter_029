@@ -5,15 +5,19 @@ using namespace std;
 
 int main() {
 	string baris;
+	string NamaFile;
 
-	// membuka file dalam mode menulis.
+	cout << "Masukan Nama File : ";
+	cin >> NamaFile;
+
+	// membuka file dalam mode menulis. 
 	ofstream outfile;
-	// menunjuk ke sebuah nama file
-	outfile.open("contohfile.txt");
+	// menunjuk ke seebuah nama file
+	outfile.open(NamaFile + ".txt", ios::out);
 
 	cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 	//unlimited loop untuk menulis
-	while(true) {
+	while (true) {
 		cout << "- ";
 		//mendapatkan setiap karakter dalam satu baris 
 		getline(cin, baris);
@@ -28,7 +32,7 @@ int main() {
 	//Membuka file dalam mode membaca 
 	ifstream infile;
 	//menunjuk ke sebuah file 
-	infile.open("contohfile.txt");
+	infile.open(NamaFile + ".txt", ios::in);
 
 	cout << endl << ">= Membuka dan membaca file " << endl;
 	//jika file ada maka
@@ -46,4 +50,4 @@ int main() {
 	//jika tidak ditemukan file maka akan menampilkan ini
 	else cout << "Unable to open file";
 	return 0;
-}   
+}
