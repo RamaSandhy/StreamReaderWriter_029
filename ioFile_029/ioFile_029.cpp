@@ -8,4 +8,7 @@ int main() {
 
 	// membuka file dalam mode menulis.
 	ofstream outfile;
+	// memnunjuk ke sebuah nama file
+	outfile.open("contohfile.txt");
+
 }
