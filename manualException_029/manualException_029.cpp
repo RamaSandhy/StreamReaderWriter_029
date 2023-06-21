@@ -12,5 +12,10 @@ int mainn()
 		//blok ini akan dieksekusi
 		cout << "Pengecualian akan dieksekusi" << endl;
 	}
+	catch (...) {
+		/*jika selain interger maka block ini akan di eksekusi*/
+		cout << "default Pengecualian diexsekusi" << endl;
+	}
 
+	return 0;
 }
